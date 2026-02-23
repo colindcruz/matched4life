@@ -4,8 +4,10 @@ import { Link } from "wouter";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-const GET_LAUNCH_NOTIFY_API_URL = "/api/private-profiles/launch-notify/get";
-const SET_LAUNCH_NOTIFY_API_URL = "/api/private-profiles/launch-notify/set";
+const GET_LAUNCH_NOTIFY_API_URL =
+  import.meta.env.VITE_GET_LAUNCH_NOTIFY_API_URL ?? "/api/private-profiles/launch-notify/get";
+const SET_LAUNCH_NOTIFY_API_URL =
+  import.meta.env.VITE_SET_LAUNCH_NOTIFY_API_URL ?? "/api/private-profiles/launch-notify/set";
 const HERO_IMAGE_URL = "/login.png";
 
 type LoadPreferenceResponse = {
